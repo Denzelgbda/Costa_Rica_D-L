@@ -248,8 +248,8 @@
 
         <!-- Timeline -->
         <div class="space-y-6" id="timeline">
-            <!-- Day 1 -->
-            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this)">
+            <!-- Day 1: 25 SEP -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-6">
                         <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
@@ -264,7 +264,6 @@
                         <div class="icon-badge bg-green-100 text-green-600">🏛️</div>
                         <div class="icon-badge bg-yellow-100 text-yellow-600">🛍️</div>
                         <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
-                        <div class="icon-badge bg-red-100 text-red-600 cursor-pointer hover:bg-red-200" onclick="deleteDay(this, event)" title="Dag verwijderen">🗑️</div>
                     </div>
                 </div>
                 <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200">
@@ -303,23 +302,22 @@
                 </div>
             </div>
 
-            <!-- Day 2 -->
-            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this)">
+            <!-- Day 2: 26 SEP -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-6">
                         <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
                             26 SEP
                         </div>
                         <div>
-                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Tortuguero" placeholder="Dag titel" oninput="savePlanningData()">
-                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Boot + auto combinatie" placeholder="Beschrijving" oninput="savePlanningData()">
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Tortuguero" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Boot + auto combinatie" placeholder="Beschrijving">
                         </div>
                     </div>
                     <div class="flex gap-3">
                         <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
                         <div class="icon-badge bg-blue-100 text-blue-600">🚤</div>
                         <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
-                        <div class="icon-badge bg-red-100 text-red-600 cursor-pointer hover:bg-red-200" onclick="deleteDay(this, event)" title="Dag verwijderen">🗑️</div>
                     </div>
                 </div>
                 <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
@@ -329,9 +327,9 @@
                                 🎯 Activiteiten:
                             </h4>
                             <div class="space-y-2">
-                                <input type="text" class="editable-field w-full" value="• Vroege start vanuit San José" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Auto naar haven, dan boot naar Tortuguero" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Inchecken bij accommodatie" placeholder="• Activiteit" oninput="savePlanningData()">
+                                <input type="text" class="editable-field w-full" value="• Vroege start vanuit San José" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Auto naar haven, dan boot naar Tortuguero" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Inchecken bij accommodatie" placeholder="• Activiteit">
                                 <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
                             </div>
                         </div>
@@ -358,23 +356,22 @@
                 </div>
             </div>
 
-            <!-- Day 3 -->
-            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this)">
+            <!-- Day 3: 27 SEP -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-6">
                         <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
                             27 SEP
                         </div>
                         <div>
-                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Tortuguero - Natuur dag" placeholder="Dag titel" oninput="savePlanningData()">
-                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Boottocht en wildlife spotting" placeholder="Beschrijving" oninput="savePlanningData()">
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Tortuguero - Natuur dag" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Boottocht en wildlife spotting" placeholder="Beschrijving">
                         </div>
                     </div>
                     <div class="flex gap-3">
                         <div class="icon-badge bg-green-100 text-green-600">🐢</div>
                         <div class="icon-badge bg-blue-100 text-blue-600">🚤</div>
                         <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
-                        <div class="icon-badge bg-red-100 text-red-600 cursor-pointer hover:bg-red-200" onclick="deleteDay(this, event)" title="Dag verwijderen">🗑️</div>
                     </div>
                 </div>
                 <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
@@ -384,9 +381,9 @@
                                 🎯 Activiteiten:
                             </h4>
                             <div class="space-y-2">
-                                <input type="text" class="editable-field w-full" value="• Boottocht door de kanalen" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Wildlife spotting (schildpadden, vogels, luiaards)" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Wandeling door het regenwoud" placeholder="• Activiteit" oninput="savePlanningData()">
+                                <input type="text" class="editable-field w-full" value="• Boottocht door de kanalen" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Wildlife spotting (schildpadden, vogels, luiaards)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Wandeling door het regenwoud" placeholder="• Activiteit">
                                 <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
                             </div>
                         </div>
@@ -413,23 +410,22 @@
                 </div>
             </div>
 
-            <!-- Day 4 -->
-            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this)">
+            <!-- Day 4: 28 SEP -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-6">
                         <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
                             28 SEP
                         </div>
                         <div>
-                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Cahuita" placeholder="Dag titel" oninput="savePlanningData()">
-                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Auto naar de Caribische kust" placeholder="Beschrijving" oninput="savePlanningData()">
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Cahuita" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Auto naar de Caribische kust" placeholder="Beschrijving">
                         </div>
                     </div>
                     <div class="flex gap-3">
                         <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
                         <div class="icon-badge bg-cyan-100 text-cyan-600">🏖️</div>
                         <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
-                        <div class="icon-badge bg-red-100 text-red-600 cursor-pointer hover:bg-red-200" onclick="deleteDay(this, event)" title="Dag verwijderen">🗑️</div>
                     </div>
                 </div>
                 <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
@@ -439,9 +435,9 @@
                                 🎯 Activiteiten:
                             </h4>
                             <div class="space-y-2">
-                                <input type="text" class="editable-field w-full" value="• Vertrek uit Tortuguero" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Aankomst Cahuita (Caribische kust)" placeholder="• Activiteit" oninput="savePlanningData()">
-                                <input type="text" class="editable-field w-full" value="• Eerste indruk van het strand" placeholder="• Activiteit" oninput="savePlanningData()">
+                                <input type="text" class="editable-field w-full" value="• Vertrek uit Tortuguero" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Aankomst Cahuita (Caribische kust)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Eerste indruk van het strand" placeholder="• Activiteit">
                                 <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
                             </div>
                         </div>
@@ -468,11 +464,652 @@
                 </div>
             </div>
 
-            <!-- Add button to create more days -->
-            <div class="text-center mt-8">
-                <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-300 transform hover:scale-105" onclick="addNewDay()">
-                    🌿 Nieuwe dag toevoegen
-                </button>
+            <!-- Day 5: 29 SEP -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            29 SEP
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Cahuita Nationaal Park" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Wandelen en snorkelen" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-green-100 text-green-600">🌊</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600">🤿</div>
+                        <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Wandeling door Cahuita Nationaal Park" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Snorkelen bij het koraalrif" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Wildlife spotting (apen, luiaards)" placeholder="• Activiteit">
+                                <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6: 30 SEP -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            30 SEP
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Arenal" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Van kust naar vulkaan" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
+                        <div class="icon-badge bg-red-100 text-red-600">🌋</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Vertrek uit Cahuita" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Autorit naar Arenal (5-6 uur)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Aankomst en eerste blik op vulkaan" placeholder="• Activiteit">
+                                <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7: 1 OKT -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            1 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Arenal Avontuur" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Zipline en hanging bridges" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-green-100 text-green-600">🌉</div>
+                        <div class="icon-badge bg-yellow-100 text-yellow-600">🪂</div>
+                        <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Zipline tour door de boomtoppen" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Hanging bridges wandeling" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Arenal Nationaal Park verkennen" placeholder="• Activiteit">
+                                <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 8: 2 OKT -->
+            <div class="day-card relax-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="relax-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            2 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Tabacón Hot Springs" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Ontspanning in warme bronnen" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-orange-100 text-orange-600">♨️</div>
+                        <div class="icon-badge bg-yellow-100 text-yellow-600">🧘</div>
+                        <div class="icon-badge bg-yellow-100 text-yellow-600 cursor-pointer hover:bg-yellow-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦥</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Tabacón Hot Springs bezoeken" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Relaxen in natuurlijke warmwaterbronnen" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Spa behandeling (optioneel)" placeholder="• Activiteit">
+                                <button class="text-yellow-600 text-sm hover:text-yellow-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 9: 3 OKT -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            3 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Monteverde" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Van vulkaan naar cloudforest" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
+                        <div class="icon-badge bg-green-100 text-green-600">☁️</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Vertrek uit Arenal" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Autorit naar Monteverde (3-4 uur)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Aankomst in het cloudforest" placeholder="• Activiteit">
+                                <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 10: 4 OKT -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            4 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Monteverde Cloud Forest" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Mystiek cloudforest verkennen" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-green-100 text-green-600">🌲</div>
+                        <div class="icon-badge bg-gray-100 text-gray-600">☁️</div>
+                        <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Monteverde Cloud Forest Reserve" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Guided nature walk" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Quetzal vogel spotten" placeholder="• Activiteit">
+                                <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 11: 5 OKT -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            5 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar Manuel Antonio" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Van bergen naar Pacifische kust" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
+                        <div class="icon-badge bg-cyan-100 text-cyan-600">🌊</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Vertrek uit Monteverde" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Autorit naar Manuel Antonio (4-5 uur)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Aankomst aan de Pacifische kust" placeholder="• Activiteit">
+                                <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 12: 6 OKT -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            6 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Manuel Antonio Nationaal Park" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Strand en wildlife combinatie" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-green-100 text-green-600">🐒</div>
+                        <div class="icon-badge bg-cyan-100 text-cyan-600">🏖️</div>
+                        <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Manuel Antonio Nationaal Park verkennen" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Apen spotten (kapucijner, brulapen)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Relaxen op het strand" placeholder="• Activiteit">
+                                <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 13: 7 OKT -->
+            <div class="day-card relax-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="relax-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            7 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Stranddag Manuel Antonio" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Ontspanning aan de Pacifische kust" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-cyan-100 text-cyan-600">🏖️</div>
+                        <div class="icon-badge bg-orange-100 text-orange-600">☀️</div>
+                        <div class="icon-badge bg-yellow-100 text-yellow-600 cursor-pointer hover:bg-yellow-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦥</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Relaxen op Playa Manuel Antonio" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Zwemmen in de Pacifische Oceaan" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Zonsondergang kijken" placeholder="• Activiteit">
+                                <button class="text-yellow-600 text-sm hover:text-yellow-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 14: 8 OKT -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            8 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Reisdag naar San José" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Terug naar de hoofdstad" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-blue-100 text-blue-600">🚗</div>
+                        <div class="icon-badge bg-gray-100 text-gray-600">🏙️</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Vertrek uit Manuel Antonio" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Autorit naar San José (3 uur)" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Laatste avond in Costa Rica" placeholder="• Activiteit">
+                                <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 15: 9 OKT -->
+            <div class="day-card activity-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="activity-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            9 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Laatste dag San José" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Souvenirs en laatste indrukken" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-yellow-100 text-yellow-600">🛍️</div>
+                        <div class="icon-badge bg-green-100 text-green-600">☕</div>
+                        <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🐆</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Souvenirs kopen in San José" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Costa Ricaanse koffie proeven" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Laatste wandeling door de stad" placeholder="• Activiteit">
+                                <button class="text-green-600 text-sm hover:text-green-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 16: 10 OKT -->
+            <div class="day-card travel-card rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this, event)">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="travel-day text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
+                            10 OKT
+                        </div>
+                        <div>
+                            <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="Vertrek naar Nederland" placeholder="Dag titel">
+                            <input type="text" class="text-gray-600 editable-field w-full mt-2" value="Adiós Costa Rica! 🇨🇷" placeholder="Beschrijving">
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="icon-badge bg-blue-100 text-blue-600">✈️</div>
+                        <div class="icon-badge bg-red-100 text-red-600">👋</div>
+                        <div class="icon-badge bg-blue-100 text-blue-600 cursor-pointer hover:bg-blue-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">🦜</div>
+                    </div>
+                </div>
+                <div class="notes-section mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🎯 Activiteiten:
+                            </h4>
+                            <div class="space-y-2">
+                                <input type="text" class="editable-field w-full" value="• Check-out hotel" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Vertrek naar luchthaven" placeholder="• Activiteit">
+                                <input type="text" class="editable-field w-full" value="• Vlucht naar Nederland" placeholder="• Activiteit">
+                                <button class="text-blue-600 text-sm hover:text-blue-800 font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                🏨 Accommodatie & Kosten:
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="Vliegtuig ✈️" oninput="savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
+                                    <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
+                                    <textarea class="editable-field w-full" placeholder="Pura Vida! Tot ziens Costa Rica! 🇨🇷🦥" oninput="savePlanningData()"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -484,17 +1121,17 @@
                 <div class="text-2xl mt-2">🦥</div>
             </div>
             <div class="stats-card rounded-2xl p-8 text-center shadow-xl">
-                <div class="text-4xl font-bold text-blue-600 mb-2">8</div>
+                <div class="text-4xl font-bold text-green-600 mb-2" id="activityDays">8</div>
                 <div class="text-sm text-gray-600 font-medium">Activiteit dagen</div>
                 <div class="text-2xl mt-2">🐆</div>
             </div>
             <div class="stats-card rounded-2xl p-8 text-center shadow-xl">
-                <div class="text-4xl font-bold text-yellow-600 mb-2">6</div>
+                <div class="text-4xl font-bold text-blue-600 mb-2" id="travelDays">6</div>
                 <div class="text-sm text-gray-600 font-medium">Reisdagen</div>
                 <div class="text-2xl mt-2">🦜</div>
             </div>
             <div class="stats-card rounded-2xl p-8 text-center shadow-xl">
-                <div class="text-4xl font-bold text-orange-600 mb-2">2</div>
+                <div class="text-4xl font-bold text-yellow-600 mb-2" id="relaxDays">2</div>
                 <div class="text-sm text-gray-600 font-medium">Relax dagen</div>
                 <div class="text-2xl mt-2">🐢</div>
             </div>
@@ -579,6 +1216,7 @@
                         });
                         
                         updateTotalCosts();
+                        updateStats();
                     }, 100);
                     
                     console.log('Planning geladen van:', data.timestamp);
@@ -647,6 +1285,7 @@
                                     });
                                     
                                     updateTotalCosts();
+                                    updateStats();
                                     savePlanningData();
                                 }, 100);
                                 
@@ -672,7 +1311,22 @@
             }
         }
 
-        function toggleNotes(element) {
+        function toggleNotes(element, event) {
+            // Don't toggle if clicking on input fields, buttons, or other interactive elements
+            if (event && (
+                event.target.tagName === 'INPUT' || 
+                event.target.tagName === 'TEXTAREA' || 
+                event.target.tagName === 'BUTTON' ||
+                event.target.tagName === 'LABEL' ||
+                event.target.closest('input') ||
+                event.target.closest('textarea') ||
+                event.target.closest('button') ||
+                event.target.closest('.editable-field') ||
+                event.target.closest('.icon-badge')
+            )) {
+                return;
+            }
+            
             const notesSection = element.querySelector('.notes-section');
             notesSection.classList.toggle('expanded');
             
@@ -704,6 +1358,20 @@
             if (totalElement) {
                 totalElement.textContent = total > 0 ? `€ ${total.toFixed(0)}` : '€ 0';
             }
+        }
+
+        function updateStats() {
+            const activityCards = document.querySelectorAll('.activity-card').length;
+            const travelCards = document.querySelectorAll('.travel-card').length;
+            const relaxCards = document.querySelectorAll('.relax-card').length;
+            
+            const activityElement = document.getElementById('activityDays');
+            const travelElement = document.getElementById('travelDays');
+            const relaxElement = document.getElementById('relaxDays');
+            
+            if (activityElement) activityElement.textContent = activityCards;
+            if (travelElement) travelElement.textContent = travelCards;
+            if (relaxElement) relaxElement.textContent = relaxCards;
         }
 
         function changeDayType(element, event) {
@@ -755,7 +1423,8 @@
                     }
                 }
                 
-                // Save changes
+                // Update stats and save changes
+                updateStats();
                 savePlanningData();
             }
         }
@@ -776,114 +1445,6 @@
             savePlanningData();
         }
 
-        function addNewDay() {
-            const date = prompt('Datum voor nieuwe dag (bijv. 11 OKT):');
-            if (!date) return;
-            
-            const title = prompt('Titel voor deze dag:');
-            if (!title) return;
-            
-            const description = prompt('Korte beschrijving:') || '';
-            
-            const dayTypeInput = prompt('Type dag:\n1 = Reisdag 🦜\n2 = Activiteit 🐆\n3 = Relax 🦥\n\nVoer 1, 2 of 3 in:', '2');
-            const dayType = dayTypeInput === '1' ? 'travel' : dayTypeInput === '3' ? 'relax' : 'activity';
-            
-            const timeline = document.getElementById('timeline');
-            const addButton = timeline.querySelector('.text-center');
-            const newDayHTML = createNewDayHTML(date, title, description, dayType);
-            
-            // Insert before the "add new day" button
-            addButton.insertAdjacentHTML('beforebegin', newDayHTML);
-            
-            // Add event listeners to new inputs
-            setTimeout(() => {
-                addInputListeners();
-                addHoverEffects();
-                updateTotalCosts();
-            }, 100);
-            
-            // Save changes
-            savePlanningData();
-        }
-
-        function createNewDayHTML(date, title, description, type) {
-            const typeClass = type === 'travel' ? 'travel-card' : type === 'relax' ? 'relax-card' : 'activity-card';
-            const typeDay = type === 'travel' ? 'travel-day' : type === 'relax' ? 'relax-day' : 'activity-day';
-            const gradientColors = type === 'travel' ? 'from-blue-50 to-cyan-50 border-blue-200' : 
-                                  type === 'relax' ? 'from-yellow-50 to-orange-50 border-yellow-200' : 
-                                  'from-green-50 to-emerald-50 border-green-200';
-            const buttonColor = type === 'travel' ? 'text-blue-600 hover:text-blue-800' : 
-                               type === 'relax' ? 'text-yellow-600 hover:text-yellow-800' : 
-                               'text-green-600 hover:text-green-800';
-            const emoji = type === 'travel' ? '🦜' : type === 'relax' ? '🦥' : '🐆';
-            
-            return `
-                <div class="day-card ${typeClass} rounded-2xl shadow-xl p-8 cursor-pointer" onclick="toggleNotes(this)">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-6">
-                            <div class="${typeDay} text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg">
-                                ${date}
-                            </div>
-                            <div>
-                                <input type="text" class="text-xl font-bold text-gray-800 editable-field w-full" value="${title}" placeholder="Dag titel" oninput="savePlanningData()">
-                                <input type="text" class="text-gray-600 editable-field w-full mt-2" value="${description}" placeholder="Beschrijving" oninput="savePlanningData()">
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="icon-badge bg-green-100 text-green-600">🌿</div>
-                            <div class="icon-badge bg-green-100 text-green-600 cursor-pointer hover:bg-green-200" onclick="changeDayType(this, event)" title="Klik om dagtype te wijzigen">${emoji}</div>
-                            <div class="icon-badge bg-red-100 text-red-600 cursor-pointer hover:bg-red-200" onclick="deleteDay(this, event)" title="Dag verwijderen">🗑️</div>
-                        </div>
-                    </div>
-                    <div class="notes-section mt-6 p-6 bg-gradient-to-r ${gradientColors} rounded-xl">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                                    🎯 Activiteiten:
-                                </h4>
-                                <div class="space-y-2">
-                                    <input type="text" class="editable-field w-full" placeholder="• Nieuwe activiteit" oninput="savePlanningData()">
-                                    <button class="${buttonColor} text-sm font-medium" onclick="addActivity(this, event)">+ Activiteit toevoegen</button>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                                    🏨 Accommodatie & Kosten:
-                                </h4>
-                                <div class="space-y-3">
-                                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                                        <label class="text-sm font-medium text-gray-700 mb-1 block">Accommodatie:</label>
-                                        <input type="text" class="editable-field w-full" placeholder="Hotel naam" oninput="savePlanningData()">
-                                    </div>
-                                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                                        <label class="text-sm font-medium text-gray-700 mb-1 block">Kosten:</label>
-                                        <input type="text" class="editable-field w-full" placeholder="€ 150" oninput="updateTotalCosts(); savePlanningData()">
-                                    </div>
-                                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                                        <label class="text-sm font-medium text-gray-700 mb-1 block">Notities:</label>
-                                        <textarea class="editable-field w-full" placeholder="Extra notities voor deze dag..." oninput="savePlanningData()"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        function deleteDay(element, event) {
-            event.stopPropagation();
-            
-            const dayCard = element.closest('.day-card');
-            const dayTitle = dayCard.querySelector('input[placeholder="Dag titel"]').value || 'deze dag';
-            
-            if (confirm(`🗑️ Weet je zeker dat je "${dayTitle}" wilt verwijderen?`)) {
-                dayCard.remove();
-                updateTotalCosts();
-                savePlanningData();
-            }
-        }
-
         // Add some interactive hover effects and event listeners
         document.addEventListener('DOMContentLoaded', function() {
             // Load saved data
@@ -894,6 +1455,9 @@
             
             // Add event listeners to all inputs for auto-save
             addInputListeners();
+            
+            // Update initial stats
+            updateStats();
         });
 
         function addHoverEffects() {
@@ -928,5 +1492,5 @@
             });
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9721668ca175de32',t:'MTc1NTY4Nzc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'972214f5745cfea6',t:'MTc1NTY5NDkxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
